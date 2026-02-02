@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: microtodo-service
+  labels:
+    app: microtodo
+spec:
+  type: LoadBalancer
+  selector:
+    app: microtodo
+  ports:
+    - protocol: TCP
+      port: 80        # Service port
+      targetPort: 80  # Container port
