@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: microtodo-service
+  namespace: microtodo-deployment     # ← Yeh line add karo
   labels:
     app: microtodo
 spec:
@@ -10,5 +11,5 @@ spec:
     app: microtodo
   ports:
     - protocol: TCP
-      port: 80        # Service port
-      targetPort: 80  # Container port
+      port: 80
+      targetPort: 80
